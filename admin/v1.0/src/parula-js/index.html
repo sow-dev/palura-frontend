@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/web3/dist/web3.min.js"></script>
+    <script type="module" src="./dist/bundle.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h2>make instance</h2>
+    const parula = new Parula(window.ethereum, {networkName: window.ethereum.chainId}, line=>console.info('[*] ',line));<br/>
+    const accounts = await parula.web3.eth.getAccounts();<br/>
+
+    <h2>mintItem</h2>
+    const ret = await parula.mintItem(accounts[0], 'https://api.parula.io/asset/metadata/1');
+    // ret : { blockNumber, txHash, contractAddress, tokenId, from, to, isMinted }, if succeed
+
+</body>
+</html>

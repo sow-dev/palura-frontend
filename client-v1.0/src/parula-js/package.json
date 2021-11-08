@@ -1,0 +1,35 @@
+{
+  "name": "parula",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/parula.js",
+  "private": true,
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/**/*.js",
+    "build": "./node_modules/browserify/bin/cmd.js ./src/index.js > ./dist/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@0x/subproviders": "^6.5.3",
+    "@truffle/hdwallet-provider": "^1.4.0",
+    "browserify": "^17.0.0",
+    "chai": "^4.3.4",
+    "eth-sig-util": "^3.0.1",
+    "ethers": "^4.0.48",
+    "fbemitter": "^3.0.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "jquery": "^3.6.0",
+    "query-string": "^7.0.0",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.3.6"
+  },
+  "devDependencies": {
+    "@alch/alchemy-web3": "^1.0.3",
+    "mocha": "^8.4.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

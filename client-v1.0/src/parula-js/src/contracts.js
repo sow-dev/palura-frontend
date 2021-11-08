@@ -1,0 +1,11 @@
+exports.NFTContract = require("./abi/Paru721V2.json")
+exports.NFT1155Contract = require("./abi/Paru1155V2.json")
+exports.Exchange = require("./abi/ExchangeV2.json")
+exports.RoyaltiesRegistry = require("./abi/RoyaltiesRegistryV2.json")
+exports.TransferProxy = require("./abi/TransferProxy.json")
+exports.ERC20TransferProxy = require("./abi/ERC20TransferProxy.json")
+
+exports.IERC20 = require("./abi/IERC20.json")
+exports.IERC721 = require("./abi/IERC721.json")
+exports.IERC1155 = require("./abi/IERC1155.json")
+exports.IERC165 = require("./abi/IERC165.json")

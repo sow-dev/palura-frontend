@@ -1,0 +1,88 @@
+{
+  "name": "parular",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve:dev": "vue-cli-service serve --open --watch --mode dev",
+    "serve": "vue-cli-service serve --open --watch --mode staging",
+    "build": "vue-cli-service build --mode staging",
+    "build:live": "vue-cli-service build --mode live",
+    "lint": "vue-cli-service lint",
+    "deploy": "aws s3 cp ./dist s3://parula-dev-frontend-client --recursive --acl public-read --profile nft-dev",
+    "deploy:live": "aws s3 cp ./dist s3://parula-live-client --recursive --acl public-read --profile parula-live"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.4.1",
+    "@hennge/vue3-pagination": "^1.0.17",
+    "@kyvg/vue3-notification": "^2.3.4",
+    "@left4code/tw-starter": "^1.1.0",
+    "@metamask/detect-provider": "^1.2.0",
+    "@tailwindcss/postcss7-compat": "^2.1.0",
+    "@truffle/hdwallet-provider": "^1.4.2",
+    "@vue/compat": "^3.1.5",
+    "all": "^0.0.0",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.0",
+    "bootstrap-vue": "^2.21.2",
+    "cash-dom": "^8.1.0",
+    "core-js": "^3.16.0",
+    "dayjs": "^1.10.7",
+    "eth-sig-util": "^3.0.1",
+    "ethereumjs-util": "^7.1.0",
+    "ethjs": "^0.4.0",
+    "fbemitter": "^3.0.0",
+    "gsap": "^3.7.1",
+    "isomorphic-unfetch": "^3.1.0",
+    "jquery": "^3.6.0",
+    "json-mediainfo": "^0.1.0",
+    "node-sass": "^6.0.1",
+    "postcss-loader": "4",
+    "sass-loader": "^10.2.0",
+    "serve": "^12.0.0",
+    "slick-carousel": "^1.8.1",
+    "v-calendar": "^3.0.0-alpha.5",
+    "vue": "^3.1.5",
+    "vue-router": "^3.5.2",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-spinner": "^1.0.4",
+    "vue-split-carousel": "^2.1.0",
+    "vue3-carousel": "^0.1.25",
+    "vue3-timepicker": "*",
+    "vuex": "^4.0.2",
+    "vuex-web3": "^1.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.1.5",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.15.1",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

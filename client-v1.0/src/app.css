@@ -1,0 +1,99 @@
+/* ./src/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 bg-blue-600 text-white rounded;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+.font-opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+.bg-parula-1{
+  background-color:#064994;
+}
+.bg-parula-2{
+  background-color:#8391a1;
+}
+.bg-parula-3{
+  background-color:#ffe427;
+}
+.bg-parula-dark{
+  background-color:#262626;
+}
+.bg-parula-gray-1{
+  background-color:#8a8a8a;
+}
+.bg-parula-gray-2{
+  background-color:#DDDDDD;
+}
+.bg-parula-gray-3{
+  background-color:#F3F3F3;
+}
+
+.group:hover .group-hover\:bg-parula-gray-3 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+
+/* 
+dark
+262626 */
+
+/*
+gray
+8A8A8A 
+DDDDDD
+F3F3F3
+*/
+
+.text-parula-1{
+  color:#064994;
+}
+.text-parula-2{
+  color:#8391a1;
+}
+.text-parula-3{
+  color:#ffe427;
+}
+
+.text-parula-dark{
+  color:#262626;
+}
+.text-parula-gray-1{
+  color:#8a8a8a;
+}
+.text-parula-gray-2{
+  color:#DDDDDD;
+}
+.text-parula-gray-3{
+  color:#F3F3F3;
+}
+
+.border-parula-dark {
+  border-color:#262626;
+}
+
+.w-activity-edit{
+  width: 29rem;
+}
+.border-t {
+  border-top-width: 0;
+  border-top:0.5px solid #262626;
+}
+.border-b-edit {
+  border-top-width: 0;
+  border-bottom:0.5px solid #8a8a8a;
+}

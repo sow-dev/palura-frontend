@@ -1,0 +1,73 @@
+---
+title: "Confirm your email address"
+preheader: "Please confirm your email address in order to activate your account"
+bodyClass: bg-gray-100
+---
+
+<extends src="src/layouts/main.html">
+  <block name="template">
+    <table class="w-full font-sans">
+      <tr>
+        <td align="center" class="bg-gray-100">
+          <table class="w-600 sm:w-full">
+            <tr>
+              <td class="p-48 sm:py-32 sm:px-24 text-center">
+                <a href="https://www.parula.com">
+                  <img src="images/parula_logo.png" width="75" alt="parula">
+                  <img src="images/parula_title.png" width="140" alt="parula">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" class="sm:px-24">
+                <table class="w-full">
+                  <tr>
+                    <td class="bg-white text-gray-800 text-base text-left p-48 sm:px-24 leading-24 rounded">
+                      <p>Hello, {{nickname}}</p>
+                      <p class="text-2xl sm:leading-32 text-black font-semibold m-0 mb-24">Drop the new world of NFT Art with parula</p>
+
+                      <p class="m-0 mb-24">Please confirm your email address by clicking the button below:</p>
+                      <div class="leading-full">
+                        <a
+                          href="{{url_link}}" target="_blank"
+                          class="inline-block py-16 px-24 rounded text-base font-semibold text-center no-underline text-white bg-blue-500 hover:bg-blue-600"
+                        >
+                          <!--[if mso]><i style="letter-spacing: 24px; mso-font-width: -100%; mso-text-raise:30px;">&#8202;</i><![endif]-->
+                          <span style="mso-text-raise: 16px;">Confirm email address &rarr;</span>
+                          <!--[if mso]><i style="letter-spacing: 24px; mso-font-width: -100%;">&#8202;</i><![endif]-->
+                        </a>
+                      </div>
+                      <table class="w-full">
+                        <tr>
+                          <td class="py-32">
+                            <div class="bg-gray-200 h-px leading-px">&zwnj;</div>
+                          </td>
+                        </tr>
+                      </table>
+                      <p class="m-0 mb-16">If you are not sure why you received this email, please ignore it. </p>
+                      <p class="m-0 mb-16">Thanks, <br>The Parula Team</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h-48"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center text-gray-600 text-xs px-24">
+                      <p class="m-0 mb-4 uppercase">Powered by Parula</p>
+ 
+                      <p class="cursor-default">
+                        <a href="https://www.parular.com/" class="text-blue-500 no-underline hover:underline">Home</a> &bull;
+                        <a href="https://www.ongroo.kr/about" class="text-blue-500 no-underline hover:underline">onGroo</a> &bull;
+                        <a href="https://www.harborintelligence.io/" class="text-blue-500 no-underline hover:underline">Harbor intelligence</a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </block>
+</extends>

@@ -1,0 +1,1 @@
+exports.TESTERC20_ADDRESS = "0xc593A79991e8f090546C9b8fC0710E92Dafaa35a"  // rinkeby
