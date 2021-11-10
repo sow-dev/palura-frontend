@@ -67,6 +67,7 @@
     "jquery": "^3.6.0",
     "js-beautify": "^1.13.5",
     "json-mediainfo": "^0.1.0",
+    "portal-vue": "^2.1.7",
     "tabulator-tables": "^4.9.3",
     "tiny-slider": "^2.9.3",
     "tippy.js": "^6.2.7",
