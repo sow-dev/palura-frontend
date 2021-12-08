@@ -207,6 +207,7 @@ export default {
 
     select(item) {
       // console.log("item ::::", JSON.stringify(item));
+      console.log('productList',this.productList);
       this.$emit("selected", item);
     },
 

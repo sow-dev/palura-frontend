@@ -26,6 +26,9 @@
         placeholder="Please select the product Before entering the price information"
         disabled
       />
+      <p class="text-xs text-right">
+        Raw: {{ weiValue }} / Decimals: {{ decimals }}
+      </p>
       <!-- <p class="text-red-500">
         To enter pricing information, first select a product.
       </p> -->

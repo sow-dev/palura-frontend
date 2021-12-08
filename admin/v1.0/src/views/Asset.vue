@@ -144,7 +144,8 @@ export default {
             AssetService.list().then(
                 res=>{
                     console.log("ResInfo:", res)
-                    this.ds = res.data.items
+                    this.ds = res.data
+                    console.log('this.ds',this.ds)
                     
                 })
         },

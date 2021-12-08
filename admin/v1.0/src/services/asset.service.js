@@ -13,8 +13,14 @@ export default {
     enable
   ) {
     return this.api().post(`/asset`, {
-      blockchain_id, address, type, symbol, img,
-      thumbnail, decimals, enable,
+      blockchain_id,
+      address,
+      type,
+      symbol,
+      img,
+      thumbnail,
+      decimals,
+      enable,
     });
   },
 
@@ -39,10 +45,20 @@ export default {
     id
   ) {
     console.log(
-      "update:::", {symbol, img, thumbnail, decimals, enable}, id
+      "update:::", {
+        symbol,
+        img,
+        thumbnail,
+        decimals,
+        enable
+      }, id
     );
     return this.api().put(`/asset/${id}`, {
-      symbol, img, thumbnail, decimals, enable,
+      symbol,
+      img,
+      thumbnail,
+      decimals,
+      enable,
     });
   },
   enable(id, enable) {

@@ -30,7 +30,7 @@
             class="w-24 text-center py-1 text-black transition-colors duration-150 border border-black focus:shadow-outline hover:bg-black hover:text-white"
             v-on:click="confirm">Confirm</button><br> -->
 
-        <p class="text-red-600 font-light text-sm my-5 transition duration-150 ease-in-out">{{error_msg}}</p>
+        <!-- <p class="text-red-600 font-light text-sm my-5 transition duration-150 ease-in-out">{{error_msg}}</p> -->
         <!-- <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
             </span> -->
         <div class="w-full flex justify-end my-5">
@@ -123,19 +123,21 @@ export default  {
        if(!this.validation()){
            return;
        }
-    
-        WalletService.checkDuplicate(this.inputEmail, this.inputNickname).then(res=>{
-            console.log(res)
-            if(res.data == 'ok'){
-                this.error_msg =''
-                this.regist()
-                // this.$emit()
-            }
-        }).catch((error)=>{
-            console.log('err msg:', error.response.data)
-            if(error.response && error.response.data)
-                this.error_msg = error.response.data
-        })
+        // this.regist() //임시 허용
+        // WalletService.walletCheck(this.inputEmail, this.inputNickname).then(res=>{
+        //     console.log(res)
+        //     if(res.data == 'ok'){
+        //         this.error_msg =''
+        //         this.regist()
+        //         // this.$emit()
+        //     }
+        // }).catch((error)=>{
+        //     console.log('err msg:', error.response.data)
+        //     if(error.response && error.response.data)
+        //         this.error_msg = error.response.data
+        // })
+        this.error_msg =''
+        this.regist()
     },
     async regist() {
         if (typeof window.ethereum !== 'undefined') {
@@ -186,6 +188,7 @@ export default  {
         console.log('서명결과:', res)
 
         console.log("param::", this.inputName, this.inputNickname, this.inputEmail, 'ETH', reg_wallet, msgParams, res.result)
+        console.log("현종확인1")
         WalletService.walletRegist(this.inputName, this.inputNickname, this.inputEmail,
             'ETH', reg_wallet, msgParams, res.result).then(res => {
             console.log('walletUser결과:', res)

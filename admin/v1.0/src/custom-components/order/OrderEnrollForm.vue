@@ -201,10 +201,11 @@
           id="price_fixed"
           class="w-full mt-0"
           v-model="price_fixed"
-          :decimals="selectedProduct.decimals"
+          :decimals="selectedProduct.decimals=18"
           @initValue="initValue"
         />
-
+        {{selectedProduct.decimals}}
+        {{decimals}}
         price_fixed: {{ price_fixed }} {{ typeof price_fixed }}
 
         <template v-if="v$.price_fixed.$silentErrors">
@@ -657,6 +658,7 @@ export default {
     },
 
     onSelectProduct: async function(item) {
+      console.log('item.id',item.id)
       const p = await ProductService.productJoinAsset(item.id);
 
       console.log("p::::", p);

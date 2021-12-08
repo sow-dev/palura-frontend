@@ -89,7 +89,7 @@
 
           <div class="flex justify-end p-5">
             <span
-              v-if="i.enable"
+              v-if="i.enable==1"
               class="py-1 px-2 rounded-full text-xs bg-theme-6 dark:bg-theme-20 text-white cursor-pointer font-medium"
             >
               enable

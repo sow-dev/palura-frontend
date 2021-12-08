@@ -55,9 +55,9 @@ aria-labelledby="modal-title" role="dialog" aria-modal="true"  :class="[{'opacit
         <div class="w-full flex md:justify-end" >
           <div class="mt-3 w-1/2 text-center sm:mt-0 sm:ml-4 sm:text-left">
             <div class="mt-2">
-              <p class="text-sm text-gray-500 my-5">
+              <!-- <p class="text-sm text-gray-500 my-5">
                 You cannot withdraw your purchase. By purchasing, you indicate that you have read and agree to the  <span class="underline"> Terms of purchase </span>
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default {
                 console.log('accounts[0]' + accounts[0])
                 console.log('this.order',this.order)
                 // console.log('this.id', this.id)
-                console.log('this.marketId', this.marketId)
+                // console.log('this.marketId', this.marketId)
                 const Params = {
                     maker: accounts[0], //order 생성자 주소  
                     maTypeMV: this.order.taTypeMV, // takerAsset,  // ta, Asset(ETH, "0x", 200), ERC20 //구매
@@ -280,12 +280,18 @@ export default {
                     // start:0,      // Date() //비경매
                     // end:0,        // Date() //비경매
                 }
+                console.log(`Params.maker:${Params.maker}
+                Params.maTypeMV:${Params.maTypeMV}
+                Params.maContractAddress:${Params.maContractAddress}
+                Params.maValue:${Params.maValue}
+                Params.sellOrderId:${Params.sellOrderId}
+                `)
                 const ret = await parula.createBuyOrderAndMatch(Params)
                 console.log('ret::' + JSON.stringify(ret))
                 
                 if(ret.status==false) {
                   notify({ type: "error", text: "Cancel" });
-                  location.href = location.href
+                  // location.href = location.href
                   return
                   }
             } catch (err) {

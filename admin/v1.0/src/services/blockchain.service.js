@@ -3,7 +3,7 @@ import axios from 'axios'
 export default {
 //post
   create(chain_id, name, short_name, chain, network_id, network, currency_name, currency_symbol, currency_decimals, icon_thumbnail, explorer_url, info_url, enable) {
-    return this.api().post(`/chain/insert`,{"chain_id":chain_id, "name":name, "short_name":short_name, "chain":chain, "network_id":network_id, "network":network,
+    return this.api().post(`/chain`,{"chain_id":chain_id, "name":name, "short_name":short_name, "chain":chain, "network_id":network_id, "network":network,
      "currency_name":currency_name, "currency_symbol":currency_symbol, "currency_decimals":currency_decimals, "icon_thumbnail":icon_thumbnail, "explorer_url":explorer_url, 
      "info_url":info_url, "enable":enable} )
   },

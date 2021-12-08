@@ -193,6 +193,7 @@ export default {
   methods: {
     load: function() {
       OrderService.listPaging(this.current_page, this.per_page)
+      // OrderService.list()
         .then((res) => {
           // this.data = res.data.items;
           // this.totalContent = res.data.total;

@@ -8,7 +8,7 @@
       <div class="my-5 flex flex-col gap-2 text-sm">
         <p class="w-full text-center py-1 text-black transition-colors duration-150 border border-black focus:shadow-outline hover:bg-gray-900 hover:text-white"
           :class="[target == 'metamask'? 'bg-black text-white': 'bg-white text-black',]" 
-          @click="target = 'metamask';mMetamask();">Metamask
+          @click="target = 'metamask';mMetamask();">Metamask222
         </p>
         <p class="w-full text-center py-1 text-black transition-colors duration-150 border border-black focus:shadow-outline hover:bg-gray-400 hover:text-white"
         :class="[target == 'walletconnect'? 'bg-gray-500 text-white': 'bg-white text-black',]" 

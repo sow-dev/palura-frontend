@@ -803,7 +803,7 @@ export default {
     },
 
     changeNetwork: function(e) {
-      this.addObj.network_id = e;
+      this.addObj.network_id = 4;
     },
 
     changeType: function(e) {
